@@ -1,0 +1,20 @@
+spring:
+    datasource:
+      driver-class-name: org.h2.Driver
+      url: jdbc:h2:mem:testdb
+      username: sa
+      password: '{cipher}AQCo8pn9Tgirl1vo+I5PX9Q+e/GB211L9kb8qhQHfUfE5G+tN3LfSPIDDhXvxlgmHogK3MwAbXQPdLwFSTM8IKl8JufHfQU4MjemM3hFYtxhgq9cc3o2fLQDUc20Dnoi++Q8Bc6w5LHlsxUkJFiDStC+3YouB7klOO2S3zwHWELy/FX0vhS2J5j9C1AiVPHgdJWIBXQN2mqaePkjbvhtqINoObA7gtTUcO2e+3SOo3IKGO9b0yq6cwBjiZ9lWz/ZbqsH/DMUKjpHKxedrBiGzJ0Wl81WgLhHK7kg5FWtQKVSUpUkIFlSWqT0RhJkSw8fS5mRb1ynXVdtaad9V4wDcSaZ6ybmY0bui455qkemrS9NCJTuF+q0qdDFXhTrzUZqpqI='
+
+token:
+  expiration_time: 86400000
+  secret: user_token
+
+gateway:
+  ip: 192.168.50.225  
+  
+order_service:
+  exception:
+    orders_is_empty: "User's orders is empty"
+  url: http://order-service/order-service/%s/orders
+  
+    
